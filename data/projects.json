@@ -1,0 +1,136 @@
+{
+  "projects": [
+    {
+      "id": "ai-business-assistant",
+      "title": "AI Business Assistant - VoiceFlow",
+      "description": "Voice-activated AI assistant that manages business operations like a CEO, understanding natural language and making autonomous decisions.",
+      "fullDescription": "A revolutionary AI-powered business assistant that works like Siri for your company. It understands voice commands, manages schedules, analyzes data, and makes intelligent decisions to optimize business operations 24/7.",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      "technologies": ["AI/ML", "Python", "Natural Language Processing", "Voice Recognition", "TensorFlow"],
+      "category": "Artificial Intelligence",
+      "date": "2024-10",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "ecommerce-mobile-app",
+      "title": "ShopEase - E-Commerce Mobile App",
+      "description": "Cross-platform mobile shopping app built with Flutter, featuring AI-powered product recommendations and seamless checkout.",
+      "fullDescription": "A beautiful and intuitive e-commerce mobile application built with Flutter for both iOS and Android. Features include AI-powered product recommendations, one-click checkout, real-time order tracking, and personalized shopping experiences.",
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+      "technologies": ["Flutter", "Dart", "Firebase", "AI/ML", "Stripe"],
+      "category": "Mobile Development",
+      "date": "2024-09",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "healthcare-management-system",
+      "title": "MediCare Pro - Healthcare Management",
+      "description": "Comprehensive healthcare management system with patient portals, appointment scheduling, and telemedicine capabilities.",
+      "fullDescription": "A complete healthcare management solution featuring patient portals, electronic health records, appointment scheduling, telemedicine video consultations, prescription management, and billing integration. Built with security and HIPAA compliance in mind.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+      "technologies": ["React", "Node.js", "MongoDB", "WebRTC", "AWS"],
+      "category": "Web Development",
+      "date": "2024-08",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "fitness-tracking-ios-app",
+      "title": "FitTrack - iOS Fitness App",
+      "description": "Native iOS fitness tracking app with AI-powered workout plans, nutrition tracking, and social features.",
+      "fullDescription": "A premium iOS fitness application built with Swift, featuring AI-powered personalized workout plans, nutrition tracking, progress analytics, social challenges, and integration with Apple Health. Beautiful UI/UX design with smooth animations.",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop",
+      "technologies": ["Swift", "SwiftUI", "CoreML", "HealthKit", "Firebase"],
+      "category": "Mobile Development",
+      "date": "2024-07",
+      "featured": true,
+      "link": "#"
+    },
+    {
+      "id": "restaurant-management-app",
+      "title": "RestaurantHub - Management Platform",
+      "description": "Complete restaurant management solution with POS, inventory, staff scheduling, and customer loyalty programs.",
+      "fullDescription": "An all-in-one restaurant management platform featuring point-of-sale system, inventory management, staff scheduling, table reservations, online ordering, customer loyalty programs, and detailed analytics. Available on web, iOS, and Android.",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
+      "technologies": ["React", "React Native", "Node.js", "PostgreSQL", "Redis"],
+      "category": "Web & Mobile",
+      "date": "2024-06",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "real-estate-platform",
+      "title": "PropFinder - Real Estate Platform",
+      "description": "Modern real estate platform with virtual tours, AI-powered property matching, and integrated mortgage calculators.",
+      "fullDescription": "A comprehensive real estate platform featuring 3D virtual property tours, AI-powered property recommendations, advanced search filters, mortgage calculators, document management, and agent-client communication tools. Responsive design for all devices.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      "technologies": ["Next.js", "TypeScript", "Three.js", "PostgreSQL", "AWS"],
+      "category": "Web Development",
+      "date": "2024-05",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "education-learning-app",
+      "title": "EduLearn - Online Learning Platform",
+      "description": "Interactive online learning platform with live classes, AI tutoring, progress tracking, and gamification.",
+      "fullDescription": "A modern e-learning platform featuring live video classes, AI-powered personalized tutoring, interactive quizzes, progress tracking, gamification elements, and social learning features. Built for students, teachers, and educational institutions.",
+      "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "technologies": ["React", "Python", "Django", "WebRTC", "TensorFlow"],
+      "category": "EdTech",
+      "date": "2024-04",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "social-media-android-app",
+      "title": "ConnectNow - Social Networking App",
+      "description": "Native Android social networking app with real-time messaging, stories, and AI-powered content discovery.",
+      "fullDescription": "A feature-rich social networking application built natively for Android using Kotlin. Includes real-time messaging, photo/video stories, AI-powered content recommendations, live streaming, and advanced privacy controls. Optimized for performance and battery life.",
+      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+      "technologies": ["Kotlin", "Android Jetpack", "Firebase", "WebRTC", "ML Kit"],
+      "category": "Mobile Development",
+      "date": "2024-03",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "inventory-management-system",
+      "title": "StockMaster - Inventory Management",
+      "description": "Cloud-based inventory management system with barcode scanning, automated reordering, and multi-location support.",
+      "fullDescription": "A powerful inventory management solution featuring barcode/QR code scanning, automated stock alerts, purchase order management, multi-location tracking, supplier management, and comprehensive reporting. Accessible from web and mobile devices.",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+      "technologies": ["Vue.js", "Laravel", "MySQL", "Redis", "Docker"],
+      "category": "Business Software",
+      "date": "2024-02",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "travel-booking-platform",
+      "title": "TravelEase - Booking Platform",
+      "description": "Comprehensive travel booking platform with flights, hotels, activities, and AI-powered trip planning.",
+      "fullDescription": "An all-in-one travel booking platform featuring flight and hotel bookings, activity reservations, AI-powered trip planning, itinerary management, travel insurance, and 24/7 customer support. Beautiful UI with interactive maps and virtual previews.",
+      "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
+      "technologies": ["React", "Node.js", "GraphQL", "MongoDB", "Stripe"],
+      "category": "Travel Tech",
+      "date": "2024-01",
+      "featured": false,
+      "link": "#"
+    },
+    {
+      "id": "crm-sales-platform",
+      "title": "SalesPro - CRM & Sales Platform",
+      "description": "Modern CRM system with lead management, sales pipeline, email automation, and analytics dashboard.",
+      "fullDescription": "A comprehensive CRM and sales platform featuring lead management, sales pipeline visualization, email automation, task management, customer communication history, reporting and analytics, and integrations with popular business tools.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "technologies": ["Angular", "NestJS", "PostgreSQL", "Redis", "Elasticsearch"],
+      "category": "Business Software",
+      "date": "2023-12",
+      "featured": false,
+      "link": "#"
+    }
+  ]
+}

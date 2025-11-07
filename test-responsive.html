@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .test-section {
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 2px solid #06b6d4;
+            border-radius: 0.5rem;
+        }
+        .breakpoint-indicator {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            background: rgba(6, 182, 212, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-100">
+    <!-- Breakpoint Indicator -->
+    <div class="breakpoint-indicator">
+        <span class="hidden sm:inline md:hidden">Mobile: &lt;768px</span>
+        <span class="hidden md:inline lg:hidden">Tablet: 768-1024px</span>
+        <span class="hidden lg:inline">Desktop: &gt;1024px</span>
+    </div>
+
+    <!-- Navigation Test -->
+    <nav class="fixed top-0 w-full backdrop-blur-lg bg-slate-900/70 border-b border-cyan-500/30 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">OrbyTrix</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Projects</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#" class="block py-2 nav-link active">Home</a>
+                <a href="#" class="block py-2 nav-link">About</a>
+                <a href="#" class="block py-2 nav-link">Projects</a>
+                <a href="#" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Grid Test -->
+        <section class="test-section container mx-auto">
+            <h2 class="text-3xl font-bold gradient-text mb-4">Grid Responsiveness Test</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 1</h3>
+                    <p class="text-gray-400">This card should stack on mobile, show 2 columns on tablet, and 3 columns on desktop.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 2</h3>
+                    <p class="text-gray-400">Resize your browser to test the responsive behavior.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-2">Card 3</h3>
+                    <p class="text-gray-400">Check padding and spacing at different breakpoints.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Test -->
+        <section class="test-section container mx-auto">
+            <h2 class="text-3xl font-bold gradient-text mb-4">Button Responsiveness Test</h2>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#" class="btn-futuristic neon-glow px-8 py-4 bg-cyan-600 text-white font-semibold rounded-lg">Button 1</a>
+                <a href="#" class="btn-futuristic neon-glow-purple px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg">Button 2</a>
+            </div>
+            <p class="text-gray-400 mt-4">Buttons should stack vertically on mobile and be horizontal on larger screens.</p>
+        </section>
+
+        <!-- Typography Test -->
+        <section class="test-section container mx-auto">
+            <h2 class="text-3xl font-bold gradient-text mb-4">Typography Responsiveness Test</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Large Heading</h1>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Medium Heading</h2>
+            <p class="text-xl text-gray-300">This text should scale appropriately on different screen sizes.</p>
+        </section>
+
+        <!-- Form Test -->
+        <section class="test-section container mx-auto">
+            <h2 class="text-3xl font-bold gradient-text mb-4">Form Responsiveness Test</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8">
+                    <form class="space-y-6">
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" class="form-input w-full px-4 py-3 bg-slate-800/50 border-2 border-slate-700 rounded-lg text-gray-100" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" class="form-input w-full px-4 py-3 bg-slate-800/50 border-2 border-slate-700 rounded-lg text-gray-100" placeholder="your@email.com">
+                        </div>
+                        <button type="submit" class="btn-futuristic w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg">Submit</button>
+                    </form>
+                </div>
+                <div class="glass-card p-8">
+                    <p class="text-gray-300">Form should stack vertically on mobile and show side-by-side on tablet and desktop.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Particle Test -->
+        <section class="test-section container mx-auto relative overflow-hidden" style="min-height: 400px;">
+            <div id="particles-container" class="absolute inset-0 pointer-events-none"></div>
+            <h2 class="text-3xl font-bold gradient-text mb-4 relative z-10">Particle System Test</h2>
+            <p class="text-gray-300 relative z-10">Particle count should adjust based on screen size: 10 on small mobile, 15 on mobile, 25 on tablet, 40 on desktop.</p>
+            <p class="text-gray-400 mt-2 relative z-10">Open console to see particle count and performance info.</p>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/effects.js"></script>
+    <script>
+        // Display current screen width
+        function updateScreenInfo() {
+            const width = window.innerWidth;
+            console.log(`Screen width: ${width}px`);
+        }
+        updateScreenInfo();
+        window.addEventListener('resize', updateScreenInfo);
+    </script>
+</body>
+</html>
