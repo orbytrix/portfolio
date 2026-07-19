@@ -1,0 +1,354 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   GLASSMORPHISM
+   ============================================ */
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 1rem;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-alt {
+  background: linear-gradient(135deg, #22d3ee 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   NEON GLOW
+   ============================================ */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 40px rgba(6, 182, 212, 0.3), 0 0 60px rgba(6, 182, 212, 0.1);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3), 0 0 60px rgba(168, 85, 247, 0.1);
+  animation: pulseGlowPurple 2s ease-in-out infinite;
+}
+
+.neon-border {
+  border: 2px solid #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5), inset 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+/* ============================================
+   GRADIENT BACKGROUND ANIMATED
+   ============================================ */
+.gradient-bg-animated {
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #164e63, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* ============================================
+   HOVER TILT (3D card effect)
+   ============================================ */
+.hover-tilt {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(-3deg) rotateY(3deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
+}
+
+/* ============================================
+   REVEAL ON SCROLL
+   ============================================ */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   NAV LINK
+   ============================================ */
+.nav-link {
+  @apply text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #06b6d4, #a855f7);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active {
+  @apply text-cyan-400;
+}
+
+/* ============================================
+   FORM INPUT + SELECT FIX
+   ============================================ */
+.form-input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color-scheme: dark;
+}
+.form-input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+}
+.form-input option {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* ============================================
+   PROCESS STEP CONNECTOR
+   ============================================ */
+.process-step {
+  position: relative;
+}
+.process-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: calc(50% + 40px);
+  width: calc(100% - 80px);
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #a855f7);
+  opacity: 0.3;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(6, 182, 212, 0.3);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.7);
+}
+
+/* ============================================
+   PROJECT CARD
+   ============================================ */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(6, 182, 212, 0.2), 0 0 0 1px rgba(6, 182, 212, 0.3);
+}
+.project-card img {
+  transition: transform 0.4s ease;
+}
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   SKIP LINK ACCESSIBILITY
+   ============================================ */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #06b6d4;
+  color: #0f172a;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* ============================================
+   TECH ORBIT — pure CSS rotation
+   ============================================ */
+
+/* The arm rotates around the center */
+.orbit-arm {
+  animation: orbitSpin var(--orbit-duration, 20s) linear infinite;
+  animation-delay: calc(var(--orbit-offset, 0deg) / 360deg * -1 * var(--orbit-duration, 20s));
+  transform-origin: 0 0;
+}
+
+/* The badge counter-rotates to stay upright */
+.orbit-badge {
+  animation: orbitCounterSpin var(--orbit-duration, 20s) linear infinite;
+  animation-delay: calc(var(--orbit-offset, 0deg) / 360deg * -1 * var(--orbit-duration, 20s));
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pause + glow on hover */
+.orbit-arm:hover {
+  animation-play-state: paused;
+}
+.orbit-arm:hover .orbit-badge {
+  animation-play-state: paused;
+  box-shadow: 0 0 18px var(--badge-glow, rgba(6,182,212,0.7)),
+              0 0 40px var(--badge-glow, rgba(6,182,212,0.4)) !important;
+  border-color: var(--badge-border, rgba(6,182,212,0.8)) !important;
+  transform: translateX(var(--orbit-radius, 120px)) translateX(-50%) translateY(-50%) scale(1.2) !important;
+  z-index: 30;
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orbitCounterSpin {
+  from { transform: translateX(var(--orbit-radius, 120px)) translateX(-50%) translateY(-50%) rotate(0deg); }
+  to   { transform: translateX(var(--orbit-radius, 120px)) translateX(-50%) translateY(-50%) rotate(-360deg); }
+}
+
+/* Responsive scale */
+.orbit-arena {
+  transform-origin: top center;
+}
+@media (max-width: 680px) {
+  .orbit-arena {
+    transform: scale(0.48);
+    margin-bottom: -300px;
+  }
+}
+@media (min-width: 681px) and (max-width: 900px) {
+  .orbit-arena {
+    transform: scale(0.72);
+    margin-bottom: -140px;
+  }
+}
+
+/* ============================================
+   SERVICE CARD HOVER BORDER
+   ============================================ */
+.service-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.service-card-hover:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.08), 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   TYPING CURSOR
+   ============================================ */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 2px;
+  color: #06b6d4;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(16px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(6,182,212,0.5), 0 0 40px rgba(6,182,212,0.3); }
+  50% { box-shadow: 0 0 30px rgba(6,182,212,0.7), 0 0 60px rgba(6,182,212,0.5); }
+}
+
+@keyframes pulseGlowPurple {
+  0%, 100% { box-shadow: 0 0 20px rgba(168,85,247,0.5), 0 0 40px rgba(168,85,247,0.3); }
+  50% { box-shadow: 0 0 30px rgba(168,85,247,0.7), 0 0 60px rgba(168,85,247,0.5); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shootingStar {
+  0% { transform: translateX(0) translateY(0); opacity: 1; }
+  100% { transform: translateX(300px) translateY(300px); opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow, .neon-glow-purple { animation: none; }
+  .gradient-bg-animated { animation: none; }
+  .reveal-on-scroll { opacity: 1; transform: none; }
+  .hover-tilt:hover { transform: none; }
+}
