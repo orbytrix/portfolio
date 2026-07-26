@@ -191,8 +191,7 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               All systems operational
             </span>
-            <span className="hidden sm:block">·</span>
-            <span>Built with React + Vite + TypeScript</span>
+           
           </div>
         </div>
       </div>
