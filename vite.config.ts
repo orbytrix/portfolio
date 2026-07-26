@@ -4,7 +4,7 @@ import path from 'path'
 
 // '/portfolio/' for GitHub Pages (repo name = portfolio)
 // '/'           for Vercel / custom domain — just change this one line
-const base = process.env.VITE_BASE_PATH ?? '/portfolio/'
+const base = process.env.VITE_BASE_PATH ?? '/'
 
 export default defineConfig({
   base,
